@@ -13,18 +13,13 @@ from tensorflow.keras.optimizers import Adam
 
 print("TensorFlow:", tf.__version__)
 
-# =========================
+
 # EXTRAÇÃO DO DATASET
-# =========================
 
 with zipfile.ZipFile("dataset_marca.zip", 'r') as zip_ref:
     zip_ref.extractall("dataset_marca")
 
 base_dir = "dataset_marca"
-
-# =========================
-# DATA GENERATORS
-# =========================
 
 # Generator para categorical_crossentropy (one-hot)
 datagen_cat = ImageDataGenerator(
@@ -70,10 +65,7 @@ val_generator_sparse = datagen_sparse.flow_from_directory(
     subset='validation'
 )
 
-# =========================
 # VISUALIZAÇÃO DO DATASET
-# =========================
-
 x, y = next(train_generator_cat)
 
 plt.figure(figsize=(10, 10))
@@ -87,9 +79,7 @@ for i in range(9):
 
 plt.show()
 
-# =========================
 # CNN CUSTOMIZADA
-# =========================
 
 def build_custom_cnn(input_shape, num_classes, num_conv_layers=3, num_filters=64, activation='relu'):
     model = Sequential()
@@ -108,9 +98,7 @@ def build_custom_cnn(input_shape, num_classes, num_conv_layers=3, num_filters=64
 
     return model
 
-# =========================
 # EXPERIMENTOS CNN
-# =========================
 
 configs = [
     {'num_conv_layers': 2, 'num_filters': 32,  'activation': 'relu', 'optimizer': 'adam', 'loss_fn': 'categorical_crossentropy'},
@@ -167,9 +155,7 @@ for cfg in configs:
         "val_acc": val_acc
     })
 
-# =========================
 # RESNET50 (TRANSFER LEARNING)
-# =========================
 
 base_model = ResNet50(
     weights='imagenet',
@@ -213,10 +199,7 @@ resultados.append({
     "val_acc": history_resnet.history['val_accuracy'][-1]
 })
 
-# =========================
 # COMPARAÇÃO FINAL
-# =========================
-
 print("\n=== Resultados Finais ===")
 df_resultados = pd.DataFrame(resultados)
 print(df_resultados.to_string(index=False))
