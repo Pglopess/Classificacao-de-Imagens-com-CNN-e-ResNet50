@@ -4,7 +4,7 @@ Experimento de classificação de imagens com redes neurais convolucionais em Py
 
 ## Sobre
 
-O projeto treina e compara diferentes configurações de CNN sobre um dataset de imagens de marcas de tênis, avaliando a acurácia de treino e validação. Ao final, compara os resultados com um modelo ResNet50 pré-treinado no ImageNet.
+O projeto treina e compara duas diferentes configurações de CNN sobre um dataset de imagens de marcas de tênis, avaliando a acurácia de treino e validação. Ao final, compara os resultados com um modelo ResNet50 pré-treinado no ImageNet.
 
 ## Funcionalidades
 
