@@ -188,7 +188,7 @@ history_resnet = model_resnet.fit(
 
 model_resnet.save("melhor_modelo_resnet.keras")
 
-# Adiciona resultado do ResNet à lista de comparação
+# Resultado do ResNet para a lista de comparação
 resultados.append({
     "modelo": "ResNet50",
     "num_conv_layers": "-",
