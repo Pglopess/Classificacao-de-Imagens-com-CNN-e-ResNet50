@@ -17,7 +17,6 @@ O projeto treina e compara CNNs customizadas com um modelo MobileNetV2 pre-trein
 - Salvamento automatico do melhor modelo por val_accuracy
 - Exportacao de curvas de treino/validacao em PNG
 - Tabela comparativa de resultados salva em CSV
-- Script de inferencia com top-k predicoes via CLI
 
 ## Modelos comparados
 
