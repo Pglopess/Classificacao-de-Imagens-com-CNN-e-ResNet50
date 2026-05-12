@@ -1,6 +1,6 @@
 # Classificacao de Imagens com CNN e MobileNetV2
 
-Experimento de classificacao de imagens com redes neurais convolucionais em Python, comparando arquiteturas CNN customizadas com transfer learning via MobileNetV2.
+Experimento de classificacao de imagens com foco em aprendizado, utiliza redes neurais convolucionais em Python, comparando arquiteturas CNN customizadas com transfer learning via MobileNetV2.
 
 ## Sobre
 
